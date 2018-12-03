@@ -79,3 +79,4 @@ tags
 node_modules/
 .next/
 *.log
+out/
