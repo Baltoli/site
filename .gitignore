@@ -77,3 +77,5 @@ tags
 # End of https://www.gitignore.io/api/osx,vim,macos,linux
 
 node_modules/
+.next/
+*.log
