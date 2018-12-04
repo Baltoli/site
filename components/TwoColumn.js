@@ -57,7 +57,7 @@ const TwoColumn = ({header, left, right, center}) => (
         margin-bottom: 2em;
       }
       
-      @media(max-width: 440px) {
+      @media(max-width: 600px) {
         .flex-grid {
           display: block;
         }

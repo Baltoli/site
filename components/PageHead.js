@@ -23,7 +23,7 @@ const PageHead = () => (
         text-decoration: underline;
       }
 
-      @media(max-width: 440px) {
+      @media(max-width: 600px) {
         body {
           margin: 0;
         }

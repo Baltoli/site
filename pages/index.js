@@ -21,7 +21,7 @@ const Profile = () => (
         text-align: center;
       }
 
-      @media(max-width: 440px) {
+      @media(max-width: 600px) {
         img {
           max-width: 100%;
           margin: 0 auto;
@@ -143,7 +143,7 @@ const ResumeList = ({align, title, ...props}) => (
         text-align: ${align};
       }
 
-      @media(max-width: 440px) {
+      @media(max-width: 600px) {
         div {
           text-align: left;
         }
