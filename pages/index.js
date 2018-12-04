@@ -12,13 +12,20 @@ const Profile = () => (
       img {
         border-radius: 30px;
         display: block;
-        margin: 0 auto;
+        margin-left: auto;
         max-width: 75%;
         filter: drop-shadow(0 0 8px #BBB);
       }
 
       h1 {
         text-align: center;
+      }
+
+      @media(max-width: 440px) {
+        img {
+          max-width: 100%;
+          margin: 0 auto;
+        }
       }
     `}</style>
   </div>
@@ -28,7 +35,7 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am a first-year PhD student at the University of Edinburgh, supervised by <Link href='#'>
+      I am a first-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
       <a>Professor Michael O'Boyle</a></Link>. My primary research goal is to improve the integration
       of heterogenous accelerators and user code, giving compilers new techniques for optimising
       performance-sensitive workloads. Currently, my focus is on two-phase type-directed program
@@ -36,9 +43,15 @@ const AboutMe = () => (
     </p>
 
     <p>
-      In my free time I play rugby at <Link href='#'><a>Lismore RFC</a></Link>, and enjoy good food,
+      In my free time I play rugby at <Link href='https://twitter.com/LismoreRFC'><a>Lismore RFC</a></Link>, and enjoy good food,
       coffee and live music as much as I can.
     </p>
+
+    <h2>contact</h2>
+    <p>
+      You can email me at <Obfuscate email="bruce.collie@ed.ac.uk" />, and all
+      my code is on <Link href="https://github.com/baltoli"><a>Github</a></Link>.
+      </p>
 
     <style jsx>{`
       p {
@@ -81,7 +94,7 @@ const WorkLink = ({name, link}) => (
         text-transform: lowercase;
       }
       span {
-        margin-left: 0.5em;
+        margin-left: 0.75em;
       }
     `}</style>
   </span>
@@ -175,7 +188,11 @@ const Work = () => (
   <ResumeList align='left' title='work and projects'>
     <WorkItem
       name="Program Synthesis"
-      description=""
+      description="
+        The main focus of my MScR and PhD work so far is the development of program synthesis
+        techniques that aim to learn the behaviour of black-box interfaces. My approach uses
+        two-phase synthesis driven by type heuristics to synthesise complex control flow.
+      "
     >
       <WorkLink 
         name="Github"
@@ -188,8 +205,13 @@ const Work = () => (
     </WorkItem>
 
     <WorkItem
-      name="Static Analysis for TESLA"
-      description=""
+      name="TESLA"
+      description="
+        During my MEng I contributed to TESLA, an existing project that allows for temporal
+        assertions to be added to C programs and checked at runtime. I used model-checking
+        to prove that individual assertions could be safely removed, improving the performance
+        of programs using TESLA.
+      "
     >
       <WorkLink
         name="Github"
@@ -204,7 +226,11 @@ const Work = () => (
 
     <WorkItem
       name="GoCardless"
-      description=""
+      description="
+        At GoCardless I was a member of the Core Payments team, responsible for developing
+        the infrastructure used by the company to process Direct Debit transactions. I
+        investigated bugs, contributed to new features, and worked on upgrading legacy code.
+      "
     >
       <WorkLink
         name="About"
@@ -214,7 +240,12 @@ const Work = () => (
 
     <WorkItem
       name="PCL"
-      description=""
+      description="
+        My undergraduate final project was an implementation of the &pi;-calculus, a minimal
+        expression of concurrent message-passing semantics. I developed a compiler and virtual
+        machine for this language, as well as a library of example programs demonstrating its
+        usage.
+      "
     >
       <WorkLink
         name="Github"
@@ -229,7 +260,12 @@ const Work = () => (
 
     <WorkItem
       name="RealVNC"
-      description=""
+      description="
+        At RealVNC I developed a prototype implementation of Apple's CarPlay software to run
+        on the company's internal in-car entertainment platform. This involved writing kernel
+        modules and patches for the Linux kernel's USB subsystem, as well as a driver for the
+        CarPlay protocol.
+      "
     >
       <WorkLink
         name="About"
@@ -239,7 +275,11 @@ const Work = () => (
 
     <WorkItem
       name="Other"
-      description=""
+      description="
+        In 2015 I was responsible for managing the website, ticketing system and admissions for
+        the Trinity Hall June Event, attended by roughly 2000 guests. I have also worked as a
+        freelance iOS and backend developer on a number of projects.
+      "
     >
     </WorkItem>
   </ResumeList>

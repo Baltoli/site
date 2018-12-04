@@ -52,10 +52,8 @@ const TwoColumn = ({header, left, right, center}) => (
       }
 
       .full-width {
-        border-radius: 30px;
-        background-color: #FAFAFA;
         padding: 1em;
-        filter: drop-shadow(0 0 8px #DDD);
+        filter: drop-shadow(0 0 0px #DDD);
         margin-bottom: 2em;
       }
       

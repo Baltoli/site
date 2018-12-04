@@ -10,6 +10,7 @@ const PageHead = () => (
     <style jsx global>{`
       body {
         color: #222;
+        background-color: #FCFCFC;
       }
 
       a {
