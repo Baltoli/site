@@ -1,8 +1,8 @@
-import PageHead from '../components/PageHead'
-import TwoColumn from '../components/TwoColumn'
+import Link from 'next/link'
 import Obfuscate from 'react-obfuscate'
 
-import Link from 'next/link'
+import PageHead from '../components/PageHead'
+import TwoColumn from '../components/TwoColumn'
 
 const Profile = () => (
   <div>
@@ -184,6 +184,47 @@ const Education = () => (
   </ResumeList>
 )
 
+const ResearchItem = ({venue, title, type, link, date}) => (
+  <>
+    <li>
+      <div className="title">
+        {title}
+      </div>
+      <div className="info">
+        {type} at {venue} {date}
+        <WorkLink name="pdf" link="static/tyde.pdf" />
+      </div>
+  {/*
+      <div className="placeTime">
+        <span className="place"></span> (<span className="date">{date}</span>)
+      </div>
+      <div className="degree">
+        <span className="name"></span>: <span className="description"></span>
+      </div>*/}
+    </li>
+
+    <style jsx>{`
+      .title {
+        font-weight: bold;
+      }
+
+      li {
+        margin-top: 1.2em;
+      }
+    `}</style>
+  </>
+)
+
+const Research = () => (
+  <ResumeList align='right' title='research'>
+    <ResearchItem
+      title="Augmenting Type Signatures for Program Synthesis"
+      type="Workshop Presentation"
+      venue="TyDe" date="2019"
+    />
+  </ResumeList>
+)
+
 const Work = () => (
   <ResumeList align='left' title='work and projects'>
     <WorkItem
@@ -298,7 +339,7 @@ const Index = () => (
 
     <TwoColumn
       header={<h1>resume</h1>}
-      left={<Education />}
+      left={<div><Research /><Education /></div>}
       right={<Work />}
     />
 
