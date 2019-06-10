@@ -191,16 +191,9 @@ const ResearchItem = ({venue, title, type, link, date}) => (
         {title}
       </div>
       <div className="info">
-        {type} at {venue} {date}
+        {type} at <Link href={link}><a>{venue} {date}</a></Link>
         <WorkLink name="pdf" link="static/tyde.pdf" />
       </div>
-  {/*
-      <div className="placeTime">
-        <span className="place"></span> (<span className="date">{date}</span>)
-      </div>
-      <div className="degree">
-        <span className="name"></span>: <span className="description"></span>
-      </div>*/}
     </li>
 
     <style jsx>{`
@@ -221,6 +214,7 @@ const Research = () => (
       title="Augmenting Type Signatures for Program Synthesis"
       type="Workshop Presentation"
       venue="TyDe" date="2019"
+      link="https://icfp19.sigplan.org/home/tyde-2019"
     />
   </ResumeList>
 )
