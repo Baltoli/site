@@ -184,37 +184,55 @@ const Education = () => (
   </ResumeList>
 )
 
-const ResearchItem = ({venue, title, type, link, date}) => (
-  <>
-    <li>
-      <div className="title">
-        {title}
-      </div>
-      <div className="info">
-        {type} at <Link href={link}><a>{venue} {date}</a></Link>
-        <WorkLink name="pdf" link="static/tyde.pdf" />
-      </div>
-    </li>
+const ResearchItem = ({venue, title, type, link, date, pdf}) => {
+  let pdfLink;
 
-    <style jsx>{`
-      .title {
-        font-weight: bold;
-      }
+  if(pdf !== undefined) {
+    pdfLink = <WorkLink name="pdf" link={pdf} />
+  } else {
+    pdfLink = <></>
+  }
 
-      li {
-        margin-top: 1.2em;
-      }
-    `}</style>
-  </>
-)
+  return (
+    <>
+      <li>
+        <div className="title">
+          {title}
+        </div>
+        <div className="info">
+          {type} at <Link href={link}><a>{venue} {date}</a></Link>
+          {pdfLink}
+        </div>
+      </li>
+
+      <style jsx>{`
+        .title {
+          font-weight: bold;
+        }
+
+        li {
+          margin-top: 1.2em;
+        }
+      `}</style>
+    </>
+  )
+}
 
 const Research = () => (
   <ResumeList align='right' title='research'>
+    <ResearchItem
+      title="Exploiting Accelerator Libraries Without Polluting Your Code"
+      type="Conference Paper (conditional)"
+      venue="PACT" date="2019"
+      link="https://pactconf.org/"
+    />
+
     <ResearchItem
       title="Augmenting Type Signatures for Program Synthesis"
       type="Workshop Presentation"
       venue="TyDe" date="2019"
       link="https://icfp19.sigplan.org/home/tyde-2019"
+      pdf="static/tyde.pdf"
     />
   </ResumeList>
 )
