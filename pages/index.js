@@ -221,7 +221,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf}) => {
 const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
-      title="Type-Directed Program Synthesis and Constraint Generation for Accelerator Library Portability"
+      title="Type-Directed Program Synthesis and Constraint Generation for Library Portability"
       type="Conference Paper"
       venue="PACT" date="2019"
       link="https://pactconf.org/"
