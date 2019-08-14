@@ -221,7 +221,11 @@ const ResearchItem = ({venue, title, type, link, date, pdf}) => {
 const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
-      title="Type-Directed Program Synthesis and Constraint Generation for Library Portability"
+      title=<span>
+        <span className="line">Type-Directed Program Synthesis</span>
+        <span className="line">and Constraint Generation for Library Portability</span>
+      </span>
+
       type="Conference Paper"
       venue="PACT" date="2019"
       link="https://pactconf.org/"
@@ -229,12 +233,22 @@ const Research = () => (
     />
 
     <ResearchItem
-      title="Augmenting Type Signatures for Program Synthesis"
+      title=<span>
+        <span className="line">Augmenting Type Signatures</span>
+        <span className="line">for Program Synthesis</span>
+      </span>
+
       type="Workshop Presentation"
       venue="TyDe" date="2019"
       link="https://icfp19.sigplan.org/home/tyde-2019"
       pdf="static/tyde.pdf"
     />
+
+    <style jsx>{`
+      span.line {
+        display: inline-block;
+      }
+    `}</style>
   </ResumeList>
 )
 
