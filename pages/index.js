@@ -184,8 +184,9 @@ const Education = () => (
   </ResumeList>
 )
 
-const ResearchItem = ({venue, title, type, link, date, pdf}) => {
+const ResearchItem = ({venue, title, type, link, date, pdf, slides}) => {
   let pdfLink;
+  let slidesLink;
 
   if(pdf !== undefined) {
     pdfLink = <WorkLink name="pdf" link={pdf} />
@@ -193,8 +194,14 @@ const ResearchItem = ({venue, title, type, link, date, pdf}) => {
     pdfLink = <></>
   }
 
+  if(slides !== undefined) {
+    slidesLink = <WorkLink name="slides" link={slides} />
+  } else {
+    slidesLink = <></>
+  }
+
   return (
-    <>
+    <div>
       <li>
         <div className="title">
           {title}
@@ -202,6 +209,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf}) => {
         <div className="info">
           {type} at <Link href={link}><a>{venue} {date}</a></Link>
           {pdfLink}
+          {slidesLink}
         </div>
       </li>
 
@@ -214,7 +222,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf}) => {
           margin-top: 1.2em;
         }
       `}</style>
-    </>
+    </div>
   )
 }
 
@@ -242,6 +250,7 @@ const Research = () => (
       venue="TyDe" date="2019"
       link="https://icfp19.sigplan.org/home/tyde-2019"
       pdf="static/tyde.pdf"
+      slides="static/tyde_slides.pdf"
     />
 
     <style jsx>{`
