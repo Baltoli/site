@@ -230,7 +230,19 @@ const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
       title=<span>
+        <span className="line">M<sup>3</sup>: Black-Box Library Migration</span>
+      </span>
+
+      type="Conference Paper (in review)"
+      venue="ICSE" date="2020"
+      link="https://conf.researchr.org/home/icse-2020"
+      pdf="static/icse.pdf"
+    />
+
+    <ResearchItem
+      title=<span>
         <span className="line">Type-Directed Program Synthesis</span>
+        &nbsp;
         <span className="line">and Constraint Generation for Library Portability</span>
       </span>
 
@@ -243,6 +255,7 @@ const Research = () => (
     <ResearchItem
       title=<span>
         <span className="line">Augmenting Type Signatures</span>
+        &nbsp;
         <span className="line">for Program Synthesis</span>
       </span>
 
