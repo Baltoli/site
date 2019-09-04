@@ -43,6 +43,12 @@ const AboutMe = () => (
     </p>
 
     <p>
+      In addition to my PhD, I am an intern at the <Link href='http://web.inf.ed.ac.uk/infweb/partners/edinburgh-huawei-research-lab'><a>Huawei Edinburgh Research
+      Center</a></Link>, where I work on compiler and runtime library support for heterogenous
+      deep learning accelerators.
+    </p>
+
+    <p>
       In my free time I play rugby at <Link href='https://twitter.com/LismoreRFC'><a>Lismore RFC</a></Link>, and enjoy good food,
       coffee and live music as much as I can.
     </p>
@@ -228,6 +234,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides}) => {
 
 const Research = () => (
   <ResumeList align='right' title='research'>
+    {/*
     <ResearchItem
       title=<span>
         <span className="line">M<sup>3</sup>: Black-Box Library Migration</span>
@@ -238,6 +245,7 @@ const Research = () => (
       link="https://conf.researchr.org/home/icse-2020"
       pdf="static/icse.pdf"
     />
+    */}
 
     <ResearchItem
       title=<span>
