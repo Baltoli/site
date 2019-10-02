@@ -250,20 +250,19 @@ const Research = () => (
     <ResearchItem
       title=<span>
         <span className="line">Type-Directed Program Synthesis</span>
-        &nbsp;
-        <span className="line">and Constraint Generation for Library Portability</span>
+        <span className="line"> and Constraint Generation for Library Portability</span>
       </span>
 
       type="Conference Paper"
       venue="PACT" date="2019"
       link="https://pactconf.org/"
       pdf="static/pact.pdf"
+      slides="static/pact_slides.pdf"
     />
 
     <ResearchItem
       title=<span>
         <span className="line">Augmenting Type Signatures</span>
-        &nbsp;
         <span className="line">for Program Synthesis</span>
       </span>
 
