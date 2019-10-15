@@ -35,7 +35,7 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am a first-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
+      I am a second-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
       <a>Professor Michael O'Boyle</a></Link>. My primary research goal is to improve the integration
       of heterogenous accelerators and user code, giving compilers new techniques for optimising
       performance-sensitive workloads. Currently, my focus is on two-phase type-directed program
@@ -250,7 +250,7 @@ const Research = () => (
     <ResearchItem
       title=<span>
         <span className="line">Type-Directed Program Synthesis</span>
-        <span className="line"> and Constraint Generation for Library Portability</span>
+        <span className="line">&nbsp;and Constraint Generation for Library Portability</span>
       </span>
 
       type="Conference Paper"
@@ -263,7 +263,7 @@ const Research = () => (
     <ResearchItem
       title=<span>
         <span className="line">Augmenting Type Signatures</span>
-        <span className="line">for Program Synthesis</span>
+        <span className="line">&nbsp;for Program Synthesis</span>
       </span>
 
       type="Workshop Presentation"
