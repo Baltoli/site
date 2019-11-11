@@ -190,9 +190,10 @@ const Education = () => (
   </ResumeList>
 )
 
-const ResearchItem = ({venue, title, type, link, date, pdf, slides}) => {
+const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee}) => {
   let pdfLink;
   let slidesLink;
+  let ieeeLink;
 
   if(pdf !== undefined) {
     pdfLink = <WorkLink name="pdf" link={pdf} />
@@ -206,6 +207,12 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides}) => {
     slidesLink = <></>
   }
 
+  if(ieee !== undefined) {
+    ieeeLink = <WorkLink name="IEEE" link={ieee} />
+  } else {
+    ieeeLink = <></>
+  }
+
   return (
     <div>
       <li>
@@ -214,6 +221,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides}) => {
         </div>
         <div className="info">
           {type} at <Link href={link}><a>{venue} {date}</a></Link>
+          {ieeeLink}
           {pdfLink}
           {slidesLink}
         </div>
@@ -234,19 +242,6 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides}) => {
 
 const Research = () => (
   <ResumeList align='right' title='research'>
-    {/*
-    <ResearchItem
-      title=<span>
-        <span className="line">M<sup>3</sup>: Black-Box Library Migration</span>
-      </span>
-
-      type="Conference Paper (in review)"
-      venue="ICSE" date="2020"
-      link="https://conf.researchr.org/home/icse-2020"
-      pdf="static/icse.pdf"
-    />
-    */}
-
     <ResearchItem
       title=<span>
         <span className="line">Type-Directed Program Synthesis</span>
@@ -258,6 +253,7 @@ const Research = () => (
       link="https://pactconf.org/"
       pdf="static/pact.pdf"
       slides="static/pact_slides.pdf"
+      ieee="https://ieeexplore.ieee.org/document/8891611"
     />
 
     <ResearchItem
