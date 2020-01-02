@@ -244,13 +244,24 @@ const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
       title=<span>
+        <span className="line">Automatically Harnessing Sparse Acceleration</span>
+      </span>
+
+      type="Conference Paper"
+      venue="CC" date="2020"
+      link="https://conf.researchr.org/home/CC-2020"
+      pdf="static/cc.pdf"
+    />
+
+    <ResearchItem
+      title=<span>
         <span className="line">Type-Directed Program Synthesis</span>
         <span className="line">&nbsp;and Constraint Generation for Library Portability</span>
       </span>
 
       type="Conference Paper"
       venue="PACT" date="2019"
-      link="https://pactconf.org/"
+      link="https://www.sigarch.org/call-contributions/pact-2019-2/"
       pdf="static/pact.pdf"
       slides="static/pact_slides.pdf"
       ieee="https://ieeexplore.ieee.org/document/8891611"
