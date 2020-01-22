@@ -261,7 +261,7 @@ const Research = () => (
 
       type="Conference Paper"
       venue="PACT" date="2019"
-      link="https://www.sigarch.org/call-contributions/pact-2019-2/"
+      link="https://hpc.pnl.gov/pact19/"
       pdf="static/pact.pdf"
       slides="static/pact_slides.pdf"
       ieee="https://ieeexplore.ieee.org/document/8891611"
