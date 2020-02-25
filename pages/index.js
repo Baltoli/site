@@ -190,10 +190,11 @@ const Education = () => (
   </ResumeList>
 )
 
-const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee}) => {
+const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm}) => {
   let pdfLink;
   let slidesLink;
   let ieeeLink;
+  let acmLink;
 
   if(pdf !== undefined) {
     pdfLink = <WorkLink name="pdf" link={pdf} />
@@ -213,6 +214,12 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee}) => {
     ieeeLink = <></>
   }
 
+  if(acm !== undefined) {
+    acmLink = <WorkLink name="ACM" link={acm} />
+  } else {
+    acmLink = <></>
+  }
+
   return (
     <div>
       <li>
@@ -221,6 +228,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee}) => {
         </div>
         <div className="info">
           {type} at <Link href={link}><a>{venue} {date}</a></Link>
+          {acmLink}
           {ieeeLink}
           {pdfLink}
           {slidesLink}
@@ -251,6 +259,7 @@ const Research = () => (
       venue="CC" date="2020"
       link="https://conf.researchr.org/home/CC-2020"
       pdf="static/cc.pdf"
+      acm="https://dl.acm.org/doi/10.1145/3377555.3377893"
     />
 
     <ResearchItem
