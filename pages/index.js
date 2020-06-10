@@ -252,6 +252,17 @@ const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
       title=<span>
+        <span className="line">Retrofitting Symbolic Holes to LLVM IR</span>
+      </span>
+
+      type="Workshop Presentation"
+      venue="TyDe" date="2020"
+      link="https://icfp20.sigplan.org/home/tyde-2020"
+      pdf="static/tyde20.pdf"
+    />
+
+    <ResearchItem
+      title=<span>
         <span className="line">Automatically Harnessing Sparse Acceleration</span>
       </span>
 
