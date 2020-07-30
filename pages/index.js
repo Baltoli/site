@@ -252,6 +252,16 @@ const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
       title=<span>
+        <span className="line">M<sup>3</sup>: Semantic API Migration</span>
+      </span>
+
+      type="Conference Paper"
+      venue="ASE" date="2020"
+      link="https://conf.researchr.org/home/ase-2020"
+    />
+
+    <ResearchItem
+      title=<span>
         <span className="line">Retrofitting Symbolic Holes to LLVM IR</span>
       </span>
 
