@@ -190,11 +190,12 @@ const Education = () => (
   </ResumeList>
 )
 
-const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm}) => {
+const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm, video}) => {
   let pdfLink;
   let slidesLink;
   let ieeeLink;
   let acmLink;
+  let videoLink;
 
   if(pdf !== undefined) {
     pdfLink = <WorkLink name="pdf" link={pdf} />
@@ -220,6 +221,12 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm}) 
     acmLink = <></>
   }
 
+  if(video !== undefined) {
+    videoLink = <WorkLink name="video" link={video} />
+  } else {
+    videoLink = <></>
+  }
+
   return (
     <div>
       <li>
@@ -232,6 +239,7 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm}) 
           {ieeeLink}
           {pdfLink}
           {slidesLink}
+          {videoLink}
         </div>
       </li>
 
@@ -269,6 +277,7 @@ const Research = () => (
       venue="TyDe" date="2020"
       link="https://icfp20.sigplan.org/home/tyde-2020"
       pdf="static/tyde20.pdf"
+      video="https://www.youtube.com/watch?v=8XiFMk-_bhw"
     />
 
     <ResearchItem
