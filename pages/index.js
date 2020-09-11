@@ -259,6 +259,14 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm, v
 const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
+      title=<span className="line">Probabilistic Black-Box Program Synthesis</span>
+
+      type="Conference Paper"
+      venue="GPCE" date="2020"
+      link="https://conf.researchr.org/home/gpce-2020"
+    />
+
+    <ResearchItem
       title=<span>
         <span className="line">M<sup>3</sup>: Semantic API Migration</span>
       </span>
