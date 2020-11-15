@@ -35,7 +35,7 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am a second-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
+      I am a third-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
       <a>Professor Michael O'Boyle</a></Link>. My primary research goal is to improve the integration
       of heterogenous accelerators and user code, giving compilers new techniques for optimising
       performance-sensitive workloads. Currently, my focus is on two-phase type-directed program
@@ -190,12 +190,19 @@ const Education = () => (
   </ResumeList>
 )
 
-const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm, video}) => {
+const ResearchItem = ({award, venue, title, type, link, date, pdf, slides, ieee, acm, video}) => {
+  let awardText;
   let pdfLink;
   let slidesLink;
   let ieeeLink;
   let acmLink;
   let videoLink;
+
+  if(award !== undefined) {
+    awardText = <span>{award}</span>;
+  } else {
+    awardText = <></>
+  }
 
   if(pdf !== undefined) {
     pdfLink = <WorkLink name="pdf" link={pdf} />
@@ -241,6 +248,9 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm, v
           {slidesLink}
           {videoLink}
         </div>
+        <div className="award">
+          {awardText}
+        </div>
       </li>
 
       <style jsx>{`
@@ -250,6 +260,11 @@ const ResearchItem = ({venue, title, type, link, date, pdf, slides, ieee, acm, v
 
         li {
           margin-top: 1.2em;
+        }
+        
+        .award {
+          font-variant: small-caps;
+          font-weight: bold;
         }
       `}</style>
     </div>
@@ -264,6 +279,7 @@ const Research = () => (
         <span className="line">&nbsp;with Probabilistic Synthesis</span>
       </span>
 
+      award="best paper"
       type="Conference Paper"
       venue="GPCE" date="2020"
       link="https://conf.researchr.org/home/gpce-2020"
