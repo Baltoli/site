@@ -284,6 +284,7 @@ const Research = () => (
       venue="GPCE" date="2020"
       link="https://conf.researchr.org/home/gpce-2020"
       pdf="static/gpce.pdf"
+      acm="https://dl.acm.org/doi/10.1145/3425898.3426952"
     />
 
     <ResearchItem
