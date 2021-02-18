@@ -296,6 +296,7 @@ const Research = () => (
       venue="ASE" date="2020"
       link="https://conf.researchr.org/home/ase-2020"
       pdf="static/ase.pdf"
+      ieee="https://ieeexplore.ieee.org/abstract/document/9286032"
     />
 
     <ResearchItem
