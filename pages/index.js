@@ -275,6 +275,17 @@ const Research = () => (
   <ResumeList align='right' title='research'>
     <ResearchItem
       title=<span>
+        <span className="line">Program Lifting using Gray-Box Behavior</span>
+      </span>
+
+      type="Conference Paper"
+      venue="PACT" date="2021"
+      link="http://pact21.snu.ac.kr/"
+      pdf="static/pact21.pdf"
+    />
+
+    <ResearchItem
+      title=<span>
         <span className="line">Modeling Black-Box Components</span>
         <span className="line">&nbsp;with Probabilistic Synthesis</span>
       </span>
