@@ -43,12 +43,6 @@ const AboutMe = () => (
     </p>
 
     <p>
-      In addition to my PhD, I am an intern at the <Link href='http://web.inf.ed.ac.uk/infweb/partners/edinburgh-huawei-research-lab'><a>Huawei Edinburgh Research
-      Center</a></Link>, where I work on compiler and runtime library support for heterogenous
-      deep learning accelerators.
-    </p>
-
-    <p>
       In my free time I play rugby at <Link href='https://twitter.com/LismoreRFC'><a>Lismore RFC</a></Link>, and enjoy good food,
       coffee and live music as much as I can.
     </p>
