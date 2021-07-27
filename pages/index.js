@@ -35,11 +35,17 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am a third-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
+      I am a final-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
       <a>Professor Michael O'Boyle</a></Link>. My primary research goal is to improve the integration
       of heterogenous accelerators and user code, giving compilers new techniques for optimising
       performance-sensitive workloads. Currently, my focus is on two-phase type-directed program
       synthesis as a way of learning the behaviour of black-box interfaces.
+    </p>
+
+    <p>
+      From September I will be working at <Link
+  href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>,
+  developing compilers for formally-verified language implementations.
     </p>
 
     <p>
