@@ -35,17 +35,17 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am a final-year PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'>
-      <a>Professor Michael O'Boyle</a></Link>. My primary research goal is to improve the integration
-      of heterogenous accelerators and user code, giving compilers new techniques for optimising
-      performance-sensitive workloads. Currently, my focus is on two-phase type-directed program
-      synthesis as a way of learning the behaviour of black-box interfaces.
+      I am a compiler engineer at <Link
+      href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>,
+      where I work on developing the <Link href='https://kframework.org/'><a>K
+      Framework</a></Link>, as well as formally verified language implementations in K.
     </p>
 
     <p>
-      From September I will be working at <Link
-  href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>,
-  developing compilers for formally-verified language implementations.
+      Previously, I was a PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>. My primary research goal was to improve the integration
+      of heterogenous accelerators and user code, giving compilers new techniques for optimising
+      performance-sensitive workloads. My research focused on two-phase type-directed program
+      synthesis as a way of learning the behaviour of black-box interfaces.
     </p>
 
     <p>
@@ -371,6 +371,24 @@ const Research = () => (
 
 const Work = () => (
   <ResumeList align='left' title='work and projects'>
+    <WorkItem
+      name="Runtime Verification"
+      description="
+        At RV, my work focuses on the development of compiler tooling for the K framework (in
+        particular, the LLVM K backend intended for high-performance concrete execution of
+        programs). Additionally, I have contributed to a standards-compliant K implementation of the C
+        language.
+      "
+    >
+      <WorkLink
+        name="about"
+        link="https://runtimeverification.com"
+      />
+      <WorkLink
+        name="k github"
+        link="https://github.com/kframework/"
+      />
+    </WorkItem>
     <WorkItem
       name="Program Synthesis"
       description="
