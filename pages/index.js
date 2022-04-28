@@ -385,8 +385,8 @@ const Work = () => (
         link="https://runtimeverification.com"
       />
       <WorkLink
-        name="k github"
-        link="https://github.com/kframework/"
+        name="rv github"
+        link="https://github.com/runtimeverification/"
       />
     </WorkItem>
     <WorkItem
