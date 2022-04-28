@@ -51,8 +51,7 @@ const AboutMe = () => (
     </p>
 
     <p>
-      In my free time I play rugby at <Link href='https://twitter.com/LismoreRFC'><a>Lismore RFC</a></Link>, and enjoy good food,
-      coffee and live music as much as I can.
+      In my free time I play rugby at <Link href='https://twitter.com/LismoreRFC'><a>Lismore RFC</a></Link>.
     </p>
 
     <h2>contact</h2>
