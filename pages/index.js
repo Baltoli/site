@@ -56,7 +56,7 @@ const AboutMe = () => (
 
     <h2>contact</h2>
     <p>
-      You can email me at <Obfuscate email="bruce.collie@runtimeverification.com" />, and all
+      You can email me at <Obfuscate email="bruce.collie@runtimeverification.com" />, or tweet me at <Link href="https://twitter.com/__inshorts"><a>@__inshorts</a></Link>. All
       my code is on <Link href="https://github.com/baltoli"><a>Github</a></Link>.
       </p>
 
