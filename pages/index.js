@@ -42,8 +42,7 @@ const AboutMe = () => (
     </p>
 
     <p>
-      Previously, I completed a PhD at the University of Edinburgh, supervised by
-      <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>.
+      Previously, I completed a PhD at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>.
       My primary research goal was to improve the integration
       of heterogenous accelerators and user code, giving compilers new techniques for optimising
       performance-sensitive workloads. My research focused on two-phase type-directed program
