@@ -42,7 +42,9 @@ const AboutMe = () => (
     </p>
 
     <p>
-      Previously, I was a PhD student at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>. My primary research goal was to improve the integration
+      Previously, I completed a PhD at the University of Edinburgh, supervised by
+      <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>.
+      My primary research goal was to improve the integration
       of heterogenous accelerators and user code, giving compilers new techniques for optimising
       performance-sensitive workloads. My research focused on two-phase type-directed program
       synthesis as a way of learning the behaviour of black-box interfaces.
@@ -55,7 +57,7 @@ const AboutMe = () => (
 
     <h2>contact</h2>
     <p>
-      You can email me at <Obfuscate email="bruce.collie@ed.ac.uk" />, and all
+      You can email me at <Obfuscate email="bruce.collie@runtimeverification.com" />, and all
       my code is on <Link href="https://github.com/baltoli"><a>Github</a></Link>.
       </p>
 
@@ -73,7 +75,7 @@ const ResumeItem = ({name, place, date, description}) => (
         <span className="place">{place}</span> (<span className="date">{date}</span>)
       </div>
       <div className="degree">
-        <span className="name">{name}</span>: <span className="description">{description}</span>
+        <span className="name">{name}</span><span className="description">{description}</span>
       </div>
     </li>
 
@@ -163,29 +165,28 @@ const Education = () => (
     <ResumeItem 
       name="PhD Pervasive Parallelism"
       place="University of Edinburgh"
-      date="2018&ndash;"
-      description="in progress"
+      date="2018&ndash;2022"
     />
 
     <ResumeItem 
       name="MScR Pervasive Parallelism"
       place="University of Edinburgh"
       date="2017&ndash;18"
-      description="Distinction"
+      description=": Distinction"
     />
 
     <ResumeItem 
       name="MEng Computer Science"
       place="University of Cambridge"
       date="2016&ndash;17"
-      description="Distinction"
+      description=": Distinction"
     />
 
     <ResumeItem 
       name="BA Computer Science"
       place="University of Cambridge"
       date="2013&ndash;16"
-      description={<span>1<sup>st</sup> Class</span>}
+      description={<span>: 1<sup>st</sup> Class</span>}
     />
   </ResumeList>
 )
@@ -392,9 +393,10 @@ const Work = () => (
     <WorkItem
       name="Program Synthesis"
       description="
-        The main focus of my MScR and PhD work so far is the development of program synthesis
-        techniques that aim to learn the behaviour of black-box interfaces. My approach uses
-        two-phase synthesis driven by type heuristics to synthesise complex control flow.
+        The main focus of MScR and PhD was the development of program synthesis
+        techniques that aim to learn the behaviour of black-box interfaces. My
+        approach initially used two-phase synthesis driven by type heuristics to synthesise
+        complex control flow, with later work examining additional sources of information to drive synthesis in real-world contexts.
       "
     >
       <WorkLink 
@@ -402,8 +404,12 @@ const Work = () => (
         link="https://github.com/baltoli/accsynt"
       />
       <WorkLink 
-        name="Dissertation"
+        name="MSC Dissertation"
         link="static/msc.pdf"
+      />
+      <WorkLink 
+        name="PhD Thesis"
+        link="static/thesis.pdf"
       />
     </WorkItem>
 
