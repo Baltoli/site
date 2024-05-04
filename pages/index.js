@@ -35,10 +35,12 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am a compiler engineer at <Link
-      href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>,
-      where I work on developing the <Link href='https://kframework.org/'><a>K
-      Framework</a></Link>, as well as formally verified language implementations in K.
+      I am the lead developer of the <Link href='https://kframework.org/'><a>K
+      Framework</a></Link> at <Link
+      href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>. K
+      is a framework for developing mechanised operational semantics of programming
+      languages; my work focuses on the underlying compiler technology, as well as
+      specifying and developing language implementations using K.
     </p>
 
     <p>
@@ -391,7 +393,7 @@ const Work = () => (
     <WorkItem
       name="Program Synthesis"
       description="
-        The main focus of MScR and PhD was the development of program synthesis
+        The main focus of my MScR and PhD was the development of program synthesis
         techniques that aim to learn the behaviour of black-box interfaces. My
         approach initially used two-phase synthesis driven by type heuristics to synthesise
         complex control flow, with later work examining additional sources of information to drive synthesis in real-world contexts.
