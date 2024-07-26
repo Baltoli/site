@@ -35,20 +35,19 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
-      I am the lead developer of the <Link href='https://kframework.org/'><a>K
+      Previously, I was the lead developer of the <Link href='https://kframework.org/'><a>K
       Framework</a></Link> at <Link
       href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>. K
       is a framework for developing mechanised operational semantics of programming
-      languages; my work focuses on the underlying compiler technology, as well as
-      specifying and developing language implementations using K.
+      languages. I was responsible for developing the underlying compiler technology,
+      specifying and developing commercial language implementations using K, and managing the development of the broader K tooling ecosystem.
     </p>
 
     <p>
-      Previously, I completed a PhD at the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>.
-      My primary research goal was to improve the integration
-      of heterogenous accelerators and user code, giving compilers new techniques for optimising
-      performance-sensitive workloads. My research focused on two-phase type-directed program
-      synthesis as a way of learning the behaviour of black-box interfaces.
+      I hold a PhD from the University of Edinburgh, supervised by <Link href='http://www.dcs.ed.ac.uk/home/mob/'><a>Professor Michael O'Boyle</a></Link>.
+      My research focused on two-phase, type-directed program synthesis as a way
+      of learning the behaviour of black-box interfaces, at the intersection of
+      formal methods and systems research.
     </p>
 
     <p>
@@ -58,7 +57,7 @@ const AboutMe = () => (
     <h2>contact</h2>
     <p>
       You can email me at <Obfuscate email="bruce.collie@runtimeverification.com" />, or tweet me at <Link href="https://twitter.com/__inshorts"><a>@__inshorts</a></Link>. All
-      my code is on <Link href="https://github.com/baltoli"><a>Github</a></Link>.
+      my code is on <Link href="https://github.com/baltoli"><a>Github</a></Link>, and you can get an up-to-date copy of my CV <Link href="static/cv.pdf"><a>here</a></Link>.
       </p>
 
     <style jsx>{`
@@ -108,11 +107,12 @@ const WorkLink = ({name, link}) => (
   </span>
 )
 
-const WorkItem = ({name, description, ...props}) => (
+const WorkItem = ({name, description, date, ...props}) => (
   <div>
     <li>
       <div className="info">
         <span className="name">{name}</span>
+        <span className="date">({date})</span>
         {props.children}
       </div>
 
@@ -124,6 +124,10 @@ const WorkItem = ({name, description, ...props}) => (
       }
 
       .info {
+      }
+
+      .date {
+        margin-left: 0.75em;
       }
 
       .name {
@@ -165,7 +169,7 @@ const Education = () => (
     <ResumeItem 
       name="PhD Pervasive Parallelism"
       place="University of Edinburgh"
-      date="2018&ndash;2022"
+      date="2018&ndash;2021"
     />
 
     <ResumeItem 
@@ -371,14 +375,26 @@ const Research = () => (
 )
 
 const Work = () => (
-  <ResumeList align='left' title='work and projects'>
+  <ResumeList align='left' title='employment'>
+    <WorkItem
+      name="Monad Labs"
+      date="2024&ndash;"
+      description="
+      "
+    >
+      <WorkLink
+        name="about"
+        link="https://www.monadlabs.xyz/"
+      />
+    </WorkItem>
     <WorkItem
       name="Runtime Verification"
+      date="2021&ndash;24"
       description="
-        At RV, my work focuses on the development of compiler tooling for the K framework (in
+        At RV, I was the lead developer for the K Framework tooling ecosystem. As well as
+        working on the development of internal compiler tooling for K (in
         particular, the LLVM K backend intended for high-performance concrete execution of
-        programs). Additionally, I have contributed to a standards-compliant K implementation of the C
-        language.
+        programs), I had broad leadership responsibilities for the company's usage of K across a number of commercial projects and engagements.
       "
     >
       <WorkLink
@@ -391,7 +407,8 @@ const Work = () => (
       />
     </WorkItem>
     <WorkItem
-      name="Program Synthesis"
+      name="PhD Research"
+      date="2017&ndash;2021"
       description="
         The main focus of my MScR and PhD was the development of program synthesis
         techniques that aim to learn the behaviour of black-box interfaces. My
@@ -414,27 +431,8 @@ const Work = () => (
     </WorkItem>
 
     <WorkItem
-      name="TESLA"
-      description="
-        During my MEng I contributed to TESLA, an existing project that allows for temporal
-        assertions to be added to C programs and checked at runtime. I used model-checking
-        to prove that individual assertions could be safely removed, improving the performance
-        of programs using TESLA.
-      "
-    >
-      <WorkLink
-        name="Github"
-        link="https://github.com/cadets/tesla-static-analysis"
-      />
-
-      <WorkLink
-        name="Dissertation"
-        link="static/tesla.pdf"
-      />
-    </WorkItem>
-
-    <WorkItem
       name="GoCardless"
+      date="2016"
       description="
         At GoCardless I was a member of the Core Payments team, responsible for developing
         the infrastructure used by the company to process Direct Debit transactions. I
@@ -448,27 +446,8 @@ const Work = () => (
     </WorkItem>
 
     <WorkItem
-      name="PCL"
-      description="
-        My undergraduate final project was an implementation of the &pi;-calculus, a minimal
-        expression of concurrent message-passing semantics. I developed a compiler and virtual
-        machine for this language, as well as a library of example programs demonstrating its
-        usage.
-      "
-    >
-      <WorkLink
-        name="Github"
-        link="https://github.com/baltoli/pcl"
-      />
-
-      <WorkLink
-        name="Dissertation"
-        link="static/pcl.pdf"
-      />
-    </WorkItem>
-
-    <WorkItem
       name="RealVNC"
+      date="2015"
       description="
         At RealVNC I developed a prototype implementation of Apple's CarPlay software to run
         on the company's internal in-car entertainment platform. This involved writing kernel
@@ -480,16 +459,6 @@ const Work = () => (
         name="About"
         link="https://www.realvnc.com"
       />
-    </WorkItem>
-
-    <WorkItem
-      name="Other"
-      description="
-        In 2015 I was responsible for managing the website, ticketing system and admissions for
-        the Trinity Hall June Event, attended by roughly 2000 guests. I have also worked as a
-        freelance iOS and backend developer on a number of projects.
-      "
-    >
     </WorkItem>
   </ResumeList>
 )
@@ -507,7 +476,7 @@ const Index = () => (
 
     <TwoColumn
       header={<h1>resume</h1>}
-      left={<div><Research /><Education /></div>}
+      left={<div><Education /><Research /></div>}
       right={<Work />}
     />
 
