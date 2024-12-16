@@ -35,6 +35,17 @@ const AboutMe = () => (
   <div>
     <h2>about me</h2>
     <p>
+      I am a Compiler Engineer at <Link href='https://category.xyz'><a>Category
+      Labs</a></Link>, where I lead a team of developers working on a
+      high-performance execution layer for the <Link
+      href='https://monad.xyz'><a>Monad</a></Link> blockchain network.
+    </p>
+
+    <p>
+      <Link href='https://www.category.xyz/careers'><a>We are hiring at Category Labs!</a></Link>
+    </p>
+
+    <p>
       Previously, I was the lead developer of the <Link href='https://kframework.org/'><a>K
       Framework</a></Link> at <Link
       href='https://runtimeverification.com/'><a>Runtime Verification</a></Link>. K
@@ -50,13 +61,9 @@ const AboutMe = () => (
       formal methods and systems research.
     </p>
 
-    <p>
-      In my free time I play rugby at <Link href='https://twitter.com/LismoreRFC'><a>Lismore RFC</a></Link>.
-    </p>
-
     <h2>contact</h2>
     <p>
-      You can email me at <Obfuscate email="bruce.collie@runtimeverification.com" />, or tweet me at <Link href="https://twitter.com/__inshorts"><a>@__inshorts</a></Link>. All
+      You can email me at <Obfuscate email="bcollie@category.xyz" />, or tweet me at <Link href="https://x.com/__inshorts"><a>@__inshorts</a></Link>. All
       my code is on <Link href="https://github.com/baltoli"><a>Github</a></Link>, and you can get an up-to-date copy of my CV <Link href="static/cv.pdf"><a>here</a></Link>.
       </p>
 
@@ -377,14 +384,14 @@ const Research = () => (
 const Work = () => (
   <ResumeList align='left' title='employment'>
     <WorkItem
-      name="Monad Labs"
+      name="Category Labs"
       date="2024&ndash;"
       description="
       "
     >
       <WorkLink
         name="about"
-        link="https://www.monadlabs.xyz/"
+        link="https://www.category.xyz/"
       />
     </WorkItem>
     <WorkItem
